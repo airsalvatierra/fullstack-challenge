@@ -16,6 +16,8 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from apps.base.views import index
+from django.conf.urls.static import static
+from . import settings
 
 
 urlpatterns = [
@@ -23,3 +25,7 @@ urlpatterns = [
     url(r'', index),
     url(r'^api-auth/', include('rest_framework.urls'))
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    # urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

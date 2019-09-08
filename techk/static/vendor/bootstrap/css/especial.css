@@ -1,0 +1,69 @@
+.bg-azul {
+  background-color: #02547D !important;
+}
+
+a.bg-azul:hover, a.bg-azul:focus,
+button.bg-azul:hover,
+button.bg-azul:focus {
+  background-color: #02547D !important;
+}
+
+.bg-azul2 {
+  background-color: #0284A8 !important;
+}
+
+a.bg-azul2:hover, a.bg-azul2:focus,
+button.bg-azul2:hover,
+button.bg-azul2:focus {
+  background-color: #0284A8 !important;
+}
+
+.bg-azul3 {
+  background-color: #02BEC4 !important;
+}
+
+a.bg-azul3:hover, a.bg-azul3:focus,
+button.bg-azul3:hover,
+button.bg-azul3:focus {
+  background-color: #02BEC4 !important;
+}
+
+.bg-azul4 {
+  background-color: #A9E8DC !important;
+}
+
+a.bg-azul4:hover, a.bg-azul4:focus,
+button.bg-azul4:hover,
+button.bg-azul4:focus {
+  background-color: #A9E8DC !important;
+}
+
+.bg-azul5 {
+  background-color: #E1F7E7 !important;
+}
+
+a.bg-azul5:hover, a.bg-azul5:focus,
+button.bg-azul5:hover,
+button.bg-azul5:focus {
+  background-color: #E1F7E7 !important;
+}
+
+.bg-azul-gr {
+  background-color: #27607D !important;
+}
+
+a.bg-azul-gr:hover, a.bg-azul-gr:focus,
+button.bg-azul-gr:hover,
+button.bg-azul-gr:focus {
+  background-color: #27607D !important;
+}
+
+.bg-rojo {
+  background-color: #BE4226 !important;
+}
+
+a.bg-rojo:hover, a.bg-rojo:focus,
+button.bg-rojo:hover,
+button.bg-rojo:focus {
+  background-color: #BE4226 !important;
+}
