@@ -69,7 +69,7 @@ def scraping():
             else:
                 stock = False
             cat = Categories.objects.get(id=category_id)
-            Books.objects.get_or_create(category_id=cat,title=title,thumbnail_url=thumbnail_url,price=price,stock=stock,product_description=product_description,upc=upc)
+            Books.objects.get_or_create(category_id=cat,title=title,thumbnail_url=thumbnail_url[:10],price=price,stock=stock,product_description=product_description[:15],upc=upc)
 
         next = soup.find('li',class_="next")
         if next is not None:

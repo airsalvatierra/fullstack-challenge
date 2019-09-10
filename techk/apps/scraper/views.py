@@ -33,15 +33,15 @@ def book_list(request,pk):
         'books' : books
     }
 
-    return(request,'books.html',context)
+    return render(request,'books.html',context)
     # return HttpResponse('Hello, world!')
 
 def delete(request,pk):
     print('aqui')
 
     book = Books.objects.get(id=pk)
-    # category_id = book.category_id.category_id.id
+    category_id = book.category_id.id
     book.delete()
 
-    # return redirect(reverse('scraper:book_list',kwargs={'pk':category_id}))
-    return render(request,'index.html')
+    return redirect(reverse('scraper:book_list',kwargs={'pk':category_id}))
+    # return render(request,'index.html')
