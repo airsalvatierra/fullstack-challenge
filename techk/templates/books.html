@@ -16,7 +16,7 @@
              <th>Price</th>
              <th>Stock</th>
              <th>Product Description</th>
-             <th>UPS</th>
+             <th>UPC</th>
              <th>Eliminar</th>
            </tr>
          </thead>
@@ -29,7 +29,7 @@
                <td>{{ book.price }}</td>
                <td>{{ book.stock }}</td>
                <td>{% if book.product_description %}{{book.product_description}}{% else %}{% endif %}</td>
-               <td>{{ book.ups }}</td>
+               <td>{{ book.upc }}</td>
                <td> <a href="{% url 'scraper:delete' pk=book.pk %}">Delete</a> </td>
              </tr>
             {% endfor %}

@@ -8,8 +8,8 @@ class CategoriesAdmin(admin.ModelAdmin):
     list_display = ['id','name',]
 
 class BooksAdmin(admin.ModelAdmin):
-    fields = ['category_id','title']
-    list_display = ['category_id','title']
+    fields = ['category_id','title','upc']
+    list_display = ['category_id','title','upc']
 
 
 # Register your models here.
