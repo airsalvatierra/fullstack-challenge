@@ -12,3 +12,7 @@ services:
       - "8000:8000"
     # depends_on:
     #   - db
+    # entrypoint: /entrypoint.sh
+  # web_migrations:
+  #   build: .
+  #   command: ./manage.py migrate

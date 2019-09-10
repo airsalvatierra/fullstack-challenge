@@ -17,15 +17,14 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from apps.base.views import index
 from django.conf.urls.static import static
-from . import settings
+from config import settings
 from . import views
 
+app_name = 'scraper'
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^scraper/', include('apps.scraper.urls')),
-    url(r'', index),
-    url(r'^api-auth/', include('rest_framework.urls')),
+    url(r'^procesar/', views.procesar, name='procesar'),
+    url(r'^api-auth/', include('rest_framework.urls'))
 ]
 
 if settings.DEBUG:
