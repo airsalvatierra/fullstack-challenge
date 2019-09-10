@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% load staticfiles i18n %}
+{% load poll_extras %}
+
+{% block bodyblock %}
+  <div class="card mb-3">
+   <div class="card-header">
+     <i class="fa fa-table"></i>Lista de Socios para Modificar Cargas</div>
+   <div class="card-body">
+     <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+         <thead>
+           <tr>
+             <th>Title</th>
+             <th>Thumbnail_url</th>
+             <th>Price</th>
+             <th>Stock</th>
+             <th>Product Description</th>
+             <th>UPS</th>
+             <th>Eliminar</th>
+           </tr>
+         </thead>
+         <tbody>
+           {% if books %}
+            {% for book in books %}
+             <tr>
+               <td>{{ book.title }} </td>
+               <td>{{ book.thumbnail_url }}</td>
+               <td>{{ book.price }}</td>
+               <td>{{ book.stock }}</td>
+               <td>{% if book.product_description %}{{book.product_description}}{% else %}{% endif %}</td>
+               <td>{{ book.ups }}</td>
+               <td> <a href="{% url 'scraper:delete' pk=book.pk %}">Eliminar</a> </td>
+             </tr>
+            {% endfor %}
+           {% else %}
+             <tr>
+               <p>Actualmente no existen libros de esta categoria</p>
+             </tr>
+           {% endif %}
+         </tbody>
+       </table>
+     </div>
+   </div>
+  </div>
+{% endblock %}

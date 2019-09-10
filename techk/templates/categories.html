@@ -1,0 +1,22 @@
+{% extends "base2.html" %}
+{% load staticfiles i18n %}
+
+{% block main %}
+  <div class="card mb-3">
+   <div class="card-header">
+     <i class="fa fa-table"></i> Categories</div>
+   <div class="card-body">
+     <div class="table-responsive">
+        <ul>
+          {% if categories %}
+            {% for cat in categories %}
+              <li><a href="{% url 'scraper:book_list' pk=cat.id %}">{{ cat.name }}</a></li>
+            {% endfor %}
+          {% else %}
+            <li>Actualmente no existen categorias</li>
+          {% endif %}
+        </ul>
+     </div>
+   </div>
+  </div>
+{% endblock %}

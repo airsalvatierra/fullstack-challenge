@@ -2,11 +2,11 @@
 {% load staticfiles i18n %}
 
 {% block main %}
-  <main role="main" class="inner cover">
-    <h1 class="cover-heading">Bienvenido a Scrap Tool!</h1>
-    <p class="lead">Para iniciar el proceso de scrapping, haz click en Iniciar!</p>
-    <p class="lead">
-      <a href="{% url 'scraper:procesar' %}" class="btn btn-lg btn-primary">Iniciar</a>
-    </p>
-  </main>
+<main role="main" class="inner cover">
+  <h1 class="cover-heading">Bienvenido a Scrap Tool!</h1>
+  <p class="lead">Para iniciar el proceso de scrapping, haz click en Iniciar!</p>
+  <p class="lead">
+    <a href="{% url 'scraper:procesar' %}" class="btn btn-lg btn-primary">Iniciar</a> 
+  </p>
+</main>
 {% endblock %}

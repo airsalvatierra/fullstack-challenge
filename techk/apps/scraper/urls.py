@@ -24,6 +24,8 @@ app_name = 'scraper'
 
 urlpatterns = [
     url(r'^procesar/', views.procesar, name='procesar'),
+    url(r'^booklist/(?P<pk>[0-9]+)/$', views.book_list, name='book_list'),
+    url(r'^delete/(?P<pk>[0-9]+)/$', views.delete, name='delete'),
     url(r'^api-auth/', include('rest_framework.urls'))
 ]
 
